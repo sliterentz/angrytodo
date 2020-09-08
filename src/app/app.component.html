@@ -1,0 +1,64 @@
+<!--Angry TODO heading-->
+<div class="container-fluid">
+  <div class="row bg-danger justify-content-center 
+          align-items-center" style="height:80px">
+    <div class="col-3"></div>
+    <div class="col-6 text-light h2">
+      Angry Todo List
+    </div>
+  </div>
+
+  <!-- Angry TODO input from user -->
+  <div class="row mt-1" style="height:80px;">
+    <div class="col-3 d-none col-md-3 d-md-block"></div>
+    <div class="col-12 col-md-6 bg-primary d-flex  
+                  justify-content-center align-items-center  
+                  text-light h3">
+
+      <input [(ngModel)]="newTask" type="text" value="" class="col-7 form-control" style="width:300px;">
+
+      <div class="col-1"></div>
+
+      <button (click)="addToList()" class="btn btn-light text-success">
+        ADD TASK
+      </button>
+    </div>
+
+    <div class="col-3 d-none col-md-3 d-md-block"></div>
+  </div>
+  <br>
+
+  <div class="row">
+    <!-- Todo added-->
+    <div class="col-md-6 float-left">
+      <h1>To do</h1>
+    </div>
+    <!-- Solved Tasks added-->
+    <div class="col-md-6 float-right">
+      <h1>Done</h1>
+    </div>
+  </div>
+  <hr>
+  <div class="row col-md-12">
+    <!-- On Progress Tasks added-->
+    <div *ngFor="let x of items; let index = index;" class="row col-md-6 float-left" style="height:100px;">
+
+      <!-- <div class="col-3 d-none col-md-3 d-md-block"></div>  -->
+
+      <div class="col-12 col-md-12 bg-warning d-flex 
+                  justify-content-center align-items-center 
+                  text-light h4">
+
+        <div class="col-9 text-light h3">{{x}}</div>
+
+        <input (click)="deleteTask(index)" type="button" value="Delete" class="col-2 btn btn-danger">
+        <input (click)="doneTask(index)" type="button" value="Done" class="col-2 btn btn-success">
+      </div>
+
+      <!-- <div class="col-3 d-none col-md-3 d-md-block"></div>  -->
+    </div>
+
+  </div>
+
+
+</div>
