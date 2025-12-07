@@ -1,0 +1,28 @@
+.task-card {
+  transition: all 0.3s ease;
+  border-left: 4px solid #007bff;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.task-done {
+  border-left-color: #28a745;
+  background-color: #f8f9fa;
+}
+
+.task-done .card-text {
+  color: #6c757d;
+}
+
+.btn-group .btn {
+  padding: 0.25rem 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .btn-group .btn {
+    padding: 0.25rem 0.4rem;
+  }
+}

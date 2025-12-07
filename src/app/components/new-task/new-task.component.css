@@ -1,0 +1,26 @@
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.card-title {
+  color: #495057;
+  font-weight: 600;
+}
+
+.input-group input {
+  border-right: none;
+}
+
+.input-group input:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+.btn-primary {
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-primary:disabled {
+  cursor: not-allowed;
+}
