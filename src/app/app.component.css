@@ -1,0 +1,31 @@
+.kanban-column {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+}
+
+.kanban-header {
+  border-radius: 10px 10px 0 0;
+}
+
+.kanban-body {
+  background-color: #ffffff;
+  border-radius: 0 0 10px 10px;
+  min-height: 350px;
+}
+
+h1 {
+  color: #343a40;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .kanban-column {
+    min-height: 300px;
+  }
+  
+  .kanban-body {
+    min-height: 250px;
+  }
+}
